@@ -10,11 +10,15 @@ import (
 	"os"
 )
 
-var palette = []color.Color{color.White, color.Black}
+// https://stackoverflow.com/questions/55017546/when-creating-a-new-color-using-color-rgba-struct-type-in-go-i-am-getting-error
+var palette = []color.Color{
+	color.RGBA{0x00, 0xFF, 0x00, 0xFF}, color.Black,
+}
 
 const (
 	whiteIndex = 0
 	blackIndex = 1
+	greenIndex = 2
 )
 
 func main() {
